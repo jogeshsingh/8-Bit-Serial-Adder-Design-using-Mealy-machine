@@ -40,7 +40,7 @@ always @ (posedge i_clk )
               end
              else if (shift_s)
                begin
-      s_out <= {s_in, s_out[7:1]} ;
+                         s_out <= {s_in, s_out[7:1]} ;    /////////shift right///
                   s_out[7] <= w3  ;
        end
            else
