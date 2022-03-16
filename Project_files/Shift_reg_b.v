@@ -40,8 +40,8 @@ always @ (posedge i_clk )
               end
              else if (shift_B)
                begin
-      B_o <= {B_in, B_o[7:1]} ;
-                   B_o[7] <= w2  ;
+                         B_o <= {B_in, B_o[7:1]} ; ///shift right///
+                         B_o[7] <= w2  ;  
        end
            else
      begin
