@@ -37,7 +37,7 @@ begin
    end
           else if (shift_A)
      begin
-      A_o <= {A_in, A_o[7:1]} ;
+      A_o <= {A_in, A_o[7:1]} ;      //shift right///
        A_o[7] <= w1 ;
        end
        else
