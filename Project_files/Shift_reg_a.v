@@ -20,12 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 ///`define N 8
-module Shift_Reg_a( A_in , A_o ,w1,  i_clk , ld_A , shift_A  );
+module Shift_Reg_a( A_in , A_o , i_clk , ld_A , shift_A  );
 parameter N = 8;
 input i_clk ;
 input [N-1:0] A_in ;
 input ld_A ;
-input w1 ;
 input shift_A ;
 output reg [N-1:0] A_o ;
 
@@ -38,7 +37,6 @@ begin
           else if (shift_A)
      begin
       A_o <= {A_in, A_o[7:1]} ;      //shift right///
-       A_o[7] <= w1 ;
        end
        else
          begin
