@@ -20,13 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 ///`define N2 8
-module Shift_Reg_b ( B_in , B_o , i_clk ,w2 ,  ld_B , shift_B  );
+module Shift_Reg_b ( B_in , B_o , i_clk ,  ld_B , shift_B  );
 parameter N2 = 8;
 input i_clk ;
 input [N2-1:0] B_in ;
 input ld_B ;
 input shift_B ;
-input  w2 ;
 output reg [N2-1:0] B_o ;
 
 
@@ -41,7 +40,7 @@ always @ (posedge i_clk )
              else if (shift_B)
                begin
                          B_o <= {B_in, B_o[7:1]} ; ///shift right///
-                         B_o[7] <= w2  ;  
+                         
        end
            else
      begin
